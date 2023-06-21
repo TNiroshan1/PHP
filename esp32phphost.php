@@ -9,14 +9,14 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 
-/* // SQL Server Extension Sample Code:
+ // SQL Server Extension Sample Code:
 $connectionInfo = array("UID" => "iotuser", "pwd" => "{UOK@1234}", "Database" => "iot_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:iotserver1.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo); */
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 
 echo "Database connection is OK<br>"; 
 
-if(isset($_POST["Device_ID"]) && isset($_POST["Date_Time"]) && isset($_POST["Date_Time"]) && $_POST["Channel_ID"])) {
+if(isset($_POST["Device_ID"]) && isset($_POST["Date_Time"]) && isset($_POST["Date_Time"]) && isset($_POST["Channel_ID"])) {
 
 	$xUnitID = $_POST["Device_ID"];
 	$xdate = $_POST["Date_Time"];
@@ -36,8 +36,8 @@ if(isset($_POST["Device_ID"]) && isset($_POST["Date_Time"]) && isset($_POST["Dat
 		echo "\nNew record created successfully"; 
 	} else { 
 		echo "Error: " . $sql . "<br>" . mysqli_error($conn); 
-	}
-} */
+	}*/
+} 
 
 
 
