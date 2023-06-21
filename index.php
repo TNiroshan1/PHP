@@ -7,8 +7,20 @@
     );
     //Establishes the connection
     $conn = sqlsrv_connect($serverName, $connectionOptions);
-    $tsql= "INSERT INTO bronze (DeviceID, Date_time, ChannelID, Duration)
-  VALUES (11, 'Doe', 11,11)";
+
+	if(isset($_POST["Device_ID"]) && isset($_POST["Date_Time"]) && isset($_POST["Channel_ID"])) {
+
+		$xUnitID = $_POST["Device_ID"];
+		$xdate = $_POST["Date_Time"];
+		$xTime1 = $_POST["Channel_ID"];
+	
+
+
+    $tsql= "INSERT INTO bronze (DeviceID, Date_time, ChannelID)
+  VALUES (".$xUnitID.", ".$xdate.", ".$xChanelID.")";
+
+	}
+
     $getResults= sqlsrv_query($conn, $tsql);
     echo ("insert data to table" . PHP_EOL);
     if ($getResults == FALSE)
