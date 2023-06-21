@@ -23,19 +23,21 @@ echo "Database connection is OK<br>";
 // 	$xTime1 = $_POST["Date_Time"];
 // 	$xChanelID = $_POST["Channel_ID"];
 
-	$sql = "INSERT INTO [dbo].[bronze_layer] 
-								
-	    (	[ID]
-			,[UnitID]
-            ,[Date1]
-            ,[Time1]
-            ,[ChanelID]
-			,[Duration])
-			
-        VALUES
+	$sql = "INSERT INTO [dbo].[bronze_layer]
+	([ID]
+	,[UnitID]
+	,[Date1]
+	,[Time1]
+	,[ChanelID]
+	,[Duration])
+VALUES
+	(<1>
+	,<2>
+	,<0>
+	,<0>
+	,<4>
+	,<5>)"; 
 
-			(1, 2, ?, ?, 3 , 10)"; 
-			
 echo "INSERT OK<br>";
 
 
