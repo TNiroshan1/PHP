@@ -35,18 +35,30 @@ echo "Database connection is OK<br>";
         VALUES
 
 			(1, 2, ?, ?, 3 , 10)"; 
+			
 echo "INSERT OK<br>";
-	/* if (mysqli_query($conn, $sql)) { 
-		echo "\nNew record created successfully"; 
-	} else { 
-		echo "Error: " . $sql . "<br>" . mysqli_error($conn); 
 
 
-            // (".$xUnitID.", ".$xdate.",".$xTime1.", ".$xChanelID.")"; 
+	//  if $conn, $sql) { 
+	// 	echo "\nNew record created successfully"; 
+	// } else { 
+	// 	echo "Error: " . $sql . "<br>" . mysqli_error($conn); 
 
-	}*/
+
+    //         // (".$xUnitID.", ".$xdate.",".$xTime1.", ".$xChanelID.")"; 
+
+	// }
 // } 
 
+
+if (sqlsrv_query($conn, $sql) === TRUE) {
+	echo "New record created successfully";
+  } else {
+	echo "Error: " . $sql . "<br>" . $conn_error;
+  }
+  
+  $conn_close();
+  
 
 
 
