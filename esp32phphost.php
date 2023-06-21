@@ -25,7 +25,7 @@ if(isset($_POST["Device_ID"]) && isset($_POST["Date_Time"]) && isset($_POST["Dat
 
 	$sql = "INSERT INTO [dbo].[bronze_layer] 
 								
-			([UnitID]
+	    ([UnitID]
             ,[Date1]
             ,[Time1]
             ,[ChanelID])
