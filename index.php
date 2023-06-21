@@ -31,12 +31,7 @@ echo "Database connection is OK<br>";
 	,[ChanelID]
 	,[Duration])
 VALUES
-	(<1>
-	,<2>
-	,<0>
-	,<0>
-	,<4>
-	,<5>)"; 
+	(1,1,0,0,1,0)"; 
 
 echo "INSERT OK<br>";
 
