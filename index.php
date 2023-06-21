@@ -23,7 +23,7 @@ echo "Database connection is OK<br>";
 // 	$xTime1 = $_POST["Date_Time"];
 // 	$xChanelID = $_POST["Channel_ID"];
 
-	$sql = "INSERT INTO [dbo].[bronze_layer]
+	$sql = "INSERT INTO [bronze_layer]
 	([ID]
 	,[UnitID]
 	,[Date1]
