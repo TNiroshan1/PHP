@@ -11,15 +11,22 @@
      echo "Could not connect.\n";
      die( print_r( sqlsrv_errors(), true));
      }
-	
+	 if(isset($_POST['Device_ID']) && isset($_POST['Date_Time'])  && isset($_POST['Channel_ID'])) {
+
+
 	$device_ID = $_POST['Device_ID'];
 	$datetime = $_POST['Date_Time'];
 	$channel = $_POST['Channel_ID'];
 
+
+
     $conn = sqlsrv_connect($serverName, $connectionOptions);
     $sqlqurey= "INSERT INTO bronzelayer (DeviceID, Date_time, ChannelID)
   				VALUES (?, ?, ?)";
+
 	
+
+
 	$http_data = array($device_ID,$datetime,$channel);
 
     $getResults= sqlsrv_query($conn, $sqlqurey, $http_data);
@@ -28,6 +35,6 @@
         echo (sqlsrv_errors());
    
     sqlsrv_free_stmt($getResults);
-
+}
 	sqlsrv_close($conn);
 	?>
