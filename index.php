@@ -1,7 +1,7 @@
 <?php
 // PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server = tcp:iotserver1.database.windows.net,1433; Database = iot_db", "iotuser", "{UOK@1234}");
+    $conn = new PDO("sqlsrv:server = tcp:iotserver1.database.windows.net,1433; Database = iot_db", "iotuser", "UOK@1234");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
@@ -10,7 +10,7 @@ catch (PDOException $e) {
 }
 
  // SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "iotuser", "pwd" => "{UOK@1234}", "Database" => "iot_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => "iotuser", "pwd" => "UOK@1234", "Database" => "iot_db", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:iotserver1.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
